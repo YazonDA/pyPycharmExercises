@@ -3,12 +3,10 @@ import re
 
 def txt2list(file_addr):
     """ Module for transform text
-    from FILE_ADDR (txt file) to LIST (tuple).
+    from txt file to list of all words that make up the given text.
 
-    in argument:
-    => file_addr - string
-    out argument:
-    => s_text - tuple
+    :param file_addr: <string> file path and name
+    :return: <tuple> set of all words from given text
     """
 
     with open(file_addr) as m_file:
