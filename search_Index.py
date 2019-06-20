@@ -1,6 +1,7 @@
 import re
 import input_Text
 
+
 def search_words(pref, s_text):
     """ Prefix match search and matching words list Module.
     Matches only at the beginning of the words.
@@ -19,3 +20,6 @@ struct_text = input_Text.txt2list('inputStruct.txt')
 
 ans = search_words('ант', struct_text)
 print(ans)
+
+
+# simple comment for test git
