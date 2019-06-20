@@ -1,3 +1,6 @@
+""" Calculate the cost of a liter in the store packing box
+
+"""
 size_arr = [0, 0, 0, 0]
 name_arr = ['size_1', 'size_2', 'size_3', 'price']
 i = -1
