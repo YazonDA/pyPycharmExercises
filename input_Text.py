@@ -32,6 +32,3 @@ with open('outputStruct.txt', 'w') as my_file:
     for j in struct_text:
         my_file.write(j + ' ')
 
-
-" добавить две вещи:"
-"   1 - парсинг сайта, чтобы вытащить текст"
