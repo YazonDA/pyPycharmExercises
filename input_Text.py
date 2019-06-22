@@ -25,10 +25,11 @@ def txt2list(file_addr):
         return tuple(s_text)
 
 
-target_file = 'inputStruct.txt'
+path_2_txt = 'text_2_process/'
+target_file = path_2_txt + 'inputStruct.txt'
 struct_text = txt2list(target_file)
 
-with open('outputStruct.txt', 'w') as my_file:
+with open(path_2_txt + 'outputStruct.txt', 'w') as my_file:
     for j in struct_text:
         my_file.write(j + ' ')
 
