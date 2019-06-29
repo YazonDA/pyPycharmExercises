@@ -1,12 +1,18 @@
-""" Testing filter - function
+""" Testing atrr of object
 
 """
+import string
 
 
 def f(x):
-    if x >= 2:
+    if x[:2] == '__':
         return True
     return False
 
-a = [0, 1, 2, 3, -1, 5, -2, 6]
-print(list(filter(f, a)))
+
+# def f(x):
+#     pass
+#     return x
+
+
+print(list(filter(f, [atr for atr in dir(string)])))
