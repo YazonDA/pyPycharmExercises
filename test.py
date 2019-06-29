@@ -1,21 +1,13 @@
-""" Testing for Square(n) Sum
+""" Testing for Reversed Strings
 
 """
 
 
-def square_sum(numbers):
-    return sum(list(map(lambda x: x ** 2, numbers)))
+def solution(string):
+    return string[::-1]
 
 
-a = [0, 3, 4, 5]
+a = ' l ;'
 
-print(square_sum(a))
+print(solution(a))
 print(a)
-
-
-# --- This is not understood enough ---
-# +++
-# this algorithm is more simple
-# +++
-# def square_sum(numbers):
-#     return sum(x ** 2 for x in numbers)
