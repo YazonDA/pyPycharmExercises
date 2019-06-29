@@ -1,14 +1,14 @@
 """ Testing for How_Green_Is_My_Valley
-list properties research
+another algorithm
 """
 
 
-mass = [1, 80, -15, 2, 1]
-print(mass)
-print(type(mass))
-mass.sort(reverse=True)
-print(mass)
-print(type(mass))
-mass.reverse()
-print(mass)
-print(type(mass))
+def make_valley(arr):
+    arr = sorted(arr, reverse=True)
+    return arr[::2] + arr[1::2][::-1]
+
+
+a = [8, 12, 10, -1, 31, -4]
+
+print(make_valley(a))
+print(a)
