@@ -1,14 +1,13 @@
-""" Testing for How_Green_Is_My_Valley
-another algorithm
+""" Testing for Square(n) Sum
+
 """
 
 
-def make_valley(arr):
-    arr = sorted(arr, reverse=True)
-    return arr[::2] + arr[1::2][::-1]
+def square_sum(numbers):
+    return sum(list(map(lambda x: x ** 2, numbers)))
 
 
-a = [8, 12, 10, -1, 31, -4]
+a = [0, 3, 4, 5]
 
-print(make_valley(a))
+print(square_sum(a))
 print(a)
