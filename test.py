@@ -1,18 +1,12 @@
-""" Testing atrr of object
-
+""" Testing Once_and_Zero
+with another algorithm
 """
-import string
 
 
-def f(x):
-    if x[:2] == '__':
-        return True
-    return False
+def binary_array_to_number(arr):
+    s = sum(d * 2 ** i for i, d in enumerate(reversed(arr)))
+    return s
 
 
-# def f(x):
-#     pass
-#     return x
-
-
-print(list(filter(f, [atr for atr in dir(string)])))
+mass = [1, 1, 0, 1]
+print('new answer = ', binary_array_to_number(mass))
