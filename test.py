@@ -1,12 +1,14 @@
-""" Testing Once_and_Zero
-with another algorithm
+""" Testing for How_Green_Is_My_Valley
+list properties research
 """
 
 
-def binary_array_to_number(arr):
-    s = int(''.join(str(e) for e in arr), 2)
-    return s
-
-
-mass = [1, 0, 0, 1]
-print('new answer = ', binary_array_to_number(mass))
+mass = [1, 80, -15, 2, 1]
+print(mass)
+print(type(mass))
+mass.sort(reverse=True)
+print(mass)
+print(type(mass))
+mass.reverse()
+print(mass)
+print(type(mass))
