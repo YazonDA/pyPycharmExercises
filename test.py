@@ -1,11 +1,12 @@
-""" Testing map - function
+""" Testing filter - function
 
 """
 
 
 def f(x):
-    return x ** 2
+    if x >= 2:
+        return True
+    return False
 
-
-a = [0, 1, 2, 3]
-print(list(map(f, a)))
+a = [0, 1, 2, 3, -1, 5, -2, 6]
+print(list(filter(f, a)))
