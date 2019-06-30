@@ -1,27 +1,41 @@
-""" Testing for Find the next perfect square!
-
+""" Testing for Who likes it?
+Tags - FUNDAMENTALS FORMATTING ALGORITHMS STRINGS
 """
 
-def find_next_square(sq):
-    s = int(pow(sq, 0.5))
-    if s ** 2 == sq:
-        return int((s + 1) ** 2)
-    return -1
+def likes(names):
+    count_more = str(len(names) - 2)
+    ln = len(names) if len(names) <= 4 else 4
+    names.extend([''] * (4 - ln))
+    end_answer_1 = 'likes this'
+    end_answer_2 = 'like this'
+    my_dict = {0: ['no one', end_answer_1],
+               1: [names[0], end_answer_1],
+               2: [names[0] + ' and ' + names[1], end_answer_2],
+               3: [names[0] + ', ' + names[1] + ' and ' + names[2], end_answer_2],
+               4: [names[0] + ', ' + names[1] + ' and ' + count_more + ' others', end_answer_2]}
+    return F'{my_dict[ln][0]} {my_dict[ln][1]}'
 
 
-a = 145
+# a = []
+# a = ['Peter']
+# a = ['Jacob', 'Alex']
+# a = ['Max', 'John', 'Mark']
+# a = ['Alex', 'Jacob', 'Mark', 'Max']
+a = ['Alex', 'Jacob', 'Mark', 'Max', 'Peter']
 
 print(a)
-print(find_next_square(a))
+print(likes(a))
 
-
-# ---
-# this option is BETTER
+# this solution is CORRECT
 #   +++
-# x = sq**0.5
-# return -1 if x % 1 else (x+1)**2
-#   +++
-# root = sq ** 0.5
-# if root.is_integer():
-#   return (root + 1)**2
-# return -1
+# def likes(names):
+#     n = len(names)
+#     return {
+#         0: 'no one likes this',
+#         1: '{} likes this',
+#         2: '{} and {} like this',
+#         3: '{}, {} and {} like this',
+#         4: '{}, {} and {others} others like this'
+#         }[min(4, n)].format(*names[:3], others=n-2)
+#   ---
+#   my solution difficult :((((
