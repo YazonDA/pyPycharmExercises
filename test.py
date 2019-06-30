@@ -1,18 +1,29 @@
-""" Testing for Regex validate PIN code
-try Built-in Types - Bool
+""" Testing for Remove the minimum
+try Built-in Types - List
 """
+import random
 
 
-def validate_pin(pin):
-    # return (len(pin) == 4 or len(pin) == 6)
-    return pin.isdecimal() and (len(pin) == 4 or len(pin) == 6)
+def remove_smallest(numbers):
+    s = numbers[:]
+    if len(s) != 0: s.remove(min(s))
+    return s
 
 
-x = '1456'
-print(validate_pin(x))
+a = [random.randint(0, 1000) for i in range(10)]
+# generates the list
+b = list(a)
+# makes a swallow copy
+
+print(a)
+print(remove_smallest(a))
+print(b)
 
 
-# This is a GOOD option
+# I used the
+# s = numbers
+# ---
+# but this`s wrong. This`s only a link to the input array
 # +++
-# def validate_pin(pin):
-#     return len(pin) in (4, 6) and pin.isdigit()
+# right - like this
+# s = numbers[:]
