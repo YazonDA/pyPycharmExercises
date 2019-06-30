@@ -21,3 +21,9 @@ x = 2
 y = 1
 
 print(get_sum(x, y))
+
+
+# This is a GOOD option
+# +++
+# def get_sum(a,b):
+#     return sum(xrange(min(a,b), max(a,b)+1))
