@@ -1,29 +1,18 @@
-""" Testing for Beginner Series #3 Sum of Numbers
-try Built-in Types - Range
+""" Testing for Regex validate PIN code
+try Built-in Types - Bool
 """
 
 
-# def get_sum(a, b):
-#     s = 0
-#     if a > b:
-#         a, b = b, a
-#     for i in range(a, b + 1):
-#         s += i
-#     return s
+def validate_pin(pin):
+    # return (len(pin) == 4 or len(pin) == 6)
+    return pin.isdecimal() and (len(pin) == 4 or len(pin) == 6)
 
 
-def get_sum(a, b):
-    if a > b: a, b = b, a
-    return sum(i for i in range(a, b + 1))
-
-
-x = 2
-y = 1
-
-print(get_sum(x, y))
+x = '1456'
+print(validate_pin(x))
 
 
 # This is a GOOD option
 # +++
-# def get_sum(a,b):
-#     return sum(xrange(min(a,b), max(a,b)+1))
+# def validate_pin(pin):
+#     return len(pin) in (4, 6) and pin.isdigit()
