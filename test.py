@@ -1,18 +1,20 @@
-""" Testing for Disemvowel Trolls
-try Built-in Types - String
+""" Testing for Sum of two lowest positive integers
+try Built-in Types - List
 """
 
-def disemvowel(string):
-    return ''.join(i for i in string if i not in 'euioaEUIOA')
+def sum_two_smallest_numbers(numbers):
+    # numbers = []
+    numbers.sort()
+    return numbers.pop(0) + numbers.pop(0)
 
 
-a = "This website is for losers LOL!"
+a = [5, 8, 12, 18, 22]
 
 print(a)
-print(disemvowel(a))
+print(sum_two_smallest_numbers(a))
 
 
 # ---
-# I think this option is BETTER
+# this option is BETTER
 # +++
-# return ''.join(i for i in string.lower() if i not in 'euioa')
+# return sum(sorted(numbers)[:2])
