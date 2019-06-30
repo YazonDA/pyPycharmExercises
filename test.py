@@ -1,20 +1,18 @@
-""" Testing for Number of People in the Bus
-try Built-in Types - List
+""" Testing for Disemvowel Trolls
+try Built-in Types - String
 """
 
-
-def number(bus_stops):
-    # s = 0
-    # for i in bus_stops:
-    #     s += i[0] - i[1]
-    return sum(i[0] - i[1] for i in bus_stops)
+def disemvowel(string):
+    return ''.join(i for i in string if i not in 'euioaEUIOA')
 
 
-a = [[10, 0], [3, 5], [5, 8]]
+a = "This website is for losers LOL!"
+
 print(a)
-print(number(a))
+print(disemvowel(a))
 
 
+# ---
+# I think this option is BETTER
 # +++
-# This option is more elegant
-# return sum(i - j for i, j in bus_stops)
+# return ''.join(i for i in string.lower() if i not in 'euioa')
