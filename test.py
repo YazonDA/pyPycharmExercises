@@ -1,29 +1,20 @@
-""" Testing for Remove the minimum
+""" Testing for Number of People in the Bus
 try Built-in Types - List
 """
-import random
 
 
-def remove_smallest(numbers):
-    s = numbers[:]
-    if len(s) != 0: s.remove(min(s))
-    return s
+def number(bus_stops):
+    # s = 0
+    # for i in bus_stops:
+    #     s += i[0] - i[1]
+    return sum(i[0] - i[1] for i in bus_stops)
 
 
-a = [random.randint(0, 1000) for i in range(10)]
-# generates the list
-b = list(a)
-# makes a swallow copy
-
+a = [[10, 0], [3, 5], [5, 8]]
 print(a)
-print(remove_smallest(a))
-print(b)
+print(number(a))
 
 
-# I used the
-# s = numbers
-# ---
-# but this`s wrong. This`s only a link to the input array
 # +++
-# right - like this
-# s = numbers[:]
+# This option is more elegant
+# return sum(i - j for i, j in bus_stops)
