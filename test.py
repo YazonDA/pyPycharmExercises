@@ -1,20 +1,27 @@
-""" Testing for Sum of two lowest positive integers
-try Built-in Types - List
+""" Testing for Find the next perfect square!
+
 """
 
-def sum_two_smallest_numbers(numbers):
-    # numbers = []
-    numbers.sort()
-    return numbers.pop(0) + numbers.pop(0)
+def find_next_square(sq):
+    s = int(pow(sq, 0.5))
+    if s ** 2 == sq:
+        return int((s + 1) ** 2)
+    return -1
 
 
-a = [5, 8, 12, 18, 22]
+a = 145
 
 print(a)
-print(sum_two_smallest_numbers(a))
+print(find_next_square(a))
 
 
 # ---
 # this option is BETTER
-# +++
-# return sum(sorted(numbers)[:2])
+#   +++
+# x = sq**0.5
+# return -1 if x % 1 else (x+1)**2
+#   +++
+# root = sq ** 0.5
+# if root.is_integer():
+#   return (root + 1)**2
+# return -1
