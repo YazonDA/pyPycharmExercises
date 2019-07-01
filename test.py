@@ -1,23 +1,25 @@
 """ Testing for Sort the odd
 Tags - FUNDAMENTALS ARRAYS
 """
+from collections import Counter
 
 
-def sort_array(source_array):
-    odd_arr = sorted(x for x in source_array if x % 2)
-    j = 0
-    for i in range(len(source_array)):
-        if source_array[i] % 2:
-            source_array[i] = odd_arr[j]
-            j += 1
-    return source_array
+def stock_list(listOfArt, listOfCat):
+    if not listOfArt:
+        return ''
+    codePos = listOfArt[0].index(' ') + 1
+    cnt = Counter()
+    for s in listOfArt:
+        cnt[s[0]] += int(s[codePos:])
+    return ' - '.join('({} : {})'.format(cat, cnt[cat]) for cat in listOfCat)
 
 
-a = [5, 3, 2, 8, 1, 4]      #[1, 3, 2, 8, 5, 4]
-# a = [5, 3, 1, 8, 0]         #[1, 3, 5, 8, 0]
+b = ["ABAR 200", "CDXE 500", "BKWR 250", "BTSQ 890", "DRTY 600"]
+# c = ["A", "B"]
+c = ["V", "S", "N", "M"]
 
 # print(a)
-print(sort_array(a))
+print(stock_list(b, c))
 
 # this solutions is VERY GOOD (imho)
 #   +++
