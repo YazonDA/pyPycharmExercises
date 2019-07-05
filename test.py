@@ -4,15 +4,17 @@ Tag`s - FUNDAMENTALS MATHEMATICS ALGORITHMS NUMBERS SEQUENCES ARRAYS
 """
 
 
-def decompose(n):
-    ans = n[:]
-    sq_unit = lambda x: x ** 2
-    sq_arr = lambda x: sum(map(sq_unit, x))
-    test_unit = int(((8 ** 2 - ans[1] ** 2) ** 0.5) // 1)
-    print(test_unit)
-    return sq_arr(n)
+a = 'kjsbdvo'
 
+b = ''.join(i for i in a if i.isdecimal())
 
-a = [1, 2, 3]
+len_b = len(b)
 
-print(decompose(a))
+if len_b == 0:
+    b = '0'
+    len_b += 1
+
+b = a[:-len_b] + str(int(b) + 1).zfill(len_b)
+
+print(b, '- number')
+print(len_b, '- number of digits')
