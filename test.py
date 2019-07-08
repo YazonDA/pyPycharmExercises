@@ -1,20 +1,28 @@
-""" Testing for - Square into Squares. Protect trees
-Tag`s - FUNDAMENTALS MATHEMATICS ALGORITHMS NUMBERS SEQUENCES ARRAYS
-4 kyu
+""" Testing for - Next bigger number with the same digits
+
+GOOD solution
 """
 
 
-a = 'kjsbdvo'
+import itertools
 
-b = ''.join(i for i in a if i.isdecimal())
 
-len_b = len(b)
+def next_bigger(n):
+    s = list(str(n))
+    for i in range(len(s)-2,-1,-1):
+        if s[i] < s[i+1]:
+            t = s[i:]
+            assa = list(filter(lambda x: x>t[0], t))
+            m = min(assa)
+            t.remove(m)
+            t.sort()
+            s[i:] = [m] + t
+            return int("".join(s))
+    return -1
 
-if len_b == 0:
-    b = '0'
-    len_b += 1
 
-b = a[:-len_b] + str(int(b) + 1).zfill(len_b)
+a = 4834333331
+# ==> 687731708236
 
-print(b, '- number')
-print(len_b, '- number of digits')
+answer = next_bigger(a)
+print(f'{a} => {answer}')
