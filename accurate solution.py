@@ -14,3 +14,8 @@ n = str(n)[::-1]
 while a!=0:
 	a,b = b%a, a
 # where 'b' is the answer
+
+=================================
+# simple
+# sum of all digits of a number
+sum(map(int, str(c)))
