@@ -19,3 +19,17 @@ while a!=0:
 # simple
 # sum of all digits of a number
 sum(map(int, str(c)))
+
+=================================
+# nice
+# open/close file
+with open('path', 'r') as reader:
+    # Further file processing goes here
+
+=================================
+# simple
+# measure speed in prog
+from timeit import Timer
+t1 = Timer(lambda: min(w_arr))
+print(f'TIME max - {t1.timeit(number=1000)}')
+# min(w_arr) - whose speed
