@@ -33,3 +33,8 @@ from timeit import Timer
 t1 = Timer(lambda: min(w_arr))
 print(f'TIME max - {t1.timeit(number=1000)}')
 # min(w_arr) - whose speed
+
+=================================
+# simple
+# delete all duble
+dict.keys(dict.fromkeys(z, 1))

@@ -12,13 +12,13 @@ import re
 # <body>and the next nothing is 44827</body>
 
 ref_const = 'http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing='
-ref_var = '93781'
+ref_var = '66831'
 # print(ref_const + ref_var)
 # ref_str = ref_const + ref_var
 # print(ref_str)
 
-for i in range(100):
+for i in range(1000):
     # ref_str = ref_const + ref_var
     s = requests.get(ref_const + ref_var)
     ref_var = re.findall(r'\d{1,}', s.text)[0]
-    print(ref_var)
+    print(ref_var, s.text)
