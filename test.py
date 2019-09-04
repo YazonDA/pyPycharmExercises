@@ -1,24 +1,21 @@
-""" Testing for - Human readable duration format
-
+""" Testing for - Alphabetical Addition
 find solutions
 """
 
+import pysnooper
 
-seconds = 36620012
-ans_dict = [60, 60, 24, 365, 365]
-ans_dict_1 = [1, 60, 60*60, 24*3600, 365*24*3600, 1]
-ans_list = [(seconds // (ans_dict_1[i])) % ans_dict[i] for i in range(5)]
+@pysnooper.snoop()
+def add_letters(*l):
+	letters = l # ist(l)
+	if len(letters) == 0:
+		return 'z'
+	y08 = map(lambda x: ord(x)%96, letters)
+	y09 = list(y08)
+	y10 = sum(y09)%26 + 96
+	ans = chr(y10)
+	return ans
 
-print(ans_list)
-ans_list = []
 
-for i in range(5):
-    a3 = ans_dict[i]
-    a2 = ans_dict_1[i]
-    a4 = seconds // a2
-    a1 = a4 % a3
-    ans_list.append(a1)
-    # seconds = seconds // ans_dict[i]
-
-print(ans_list)
-print(seconds)
+a = ['a', 'b', 'c']
+asnwer = add_letters(a)
+print(asnwer)
