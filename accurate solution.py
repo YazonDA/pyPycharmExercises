@@ -38,3 +38,11 @@ print(f'TIME max - {t1.timeit(number=1000)}')
 # simple
 # delete all duble
 dict.keys(dict.fromkeys(z, 1))
+
+=================================
+# simple
+# logging/debuging
+import pysnooper
+@pysnooper.snoop()
+def something():
+	pass
