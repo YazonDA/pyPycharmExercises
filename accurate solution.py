@@ -37,7 +37,10 @@ print(f'TIME max - {t1.timeit(number=1000)}')
 =================================
 # simple
 # delete all duble
+# var 1
 dict.keys(dict.fromkeys(z, 1))
+# var 2 ( 25~30% faster)
+list(set(a))
 
 =================================
 # simple
